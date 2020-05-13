@@ -3,8 +3,10 @@ def roll_call_dwarves(array)# code an argument here
   puts name
 end
 
-def summon_captain_planet# code an argument here
-  # Your code here
+def summon_captain_planet(planeteer_calls)# code an argument here
+  planeteer_calls = ["earth", "wind", "fire", "water", "heart"]
+  summon_captain_planet(planeteer_calls)
+#=> ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"]
 end
 
 def long_planeteer_calls# code an argument here
