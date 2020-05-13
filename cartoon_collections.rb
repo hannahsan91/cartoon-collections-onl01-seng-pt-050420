@@ -1,25 +1,28 @@
-def roll_call_dwarves(array)# code an argument here
-  array = ["Doc", "Dopey", "Bashful", "Grumpy"]
-  puts array
+def roll_call_dwarves(dwarves)
+  dwarves.each_with_index do |name, index|
+    index += 1
+    puts "#{index}. #{name}"
+  end
 end
 
-def summon_captain_planet(planeteer_calls)# code an argument here
-  planeteer_calls = ["earth", "wind", "fire", "water", "heart"]
-  summon_captain_planet(planeteer_calls)
-#=> ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"]
+def summon_captain_planet(planeteer_calls)
+  planeteer_calls.collect do |call|
+    call.capitalize << "!"
+  end
 end
 
-def long_planeteer_calls(assorted_words)# code an argument here
-  short_words = ["puff", "go", "two"]
-  long_planeteer_calls(short_words)
-  assorted_words = ["two", "go", "industrious", "bop"]
-  long_planeteer_calls(assorted_words)
+def long_planeteer_calls(calls)
+  calls.any? do |call|
+    call.length > 4
+  end
 end
 
-def find_the_cheese(snacks)# code an argument here
+def find_the_cheese(array)
+  # the array below is here to help
+  i = 0
   cheese_types = ["cheddar", "gouda", "camembert"]
-  snacks = ["crackers", "gouda", "thyme"]
-  find_the_cheese(snacks)
-  soup = ["tomato soup", "cheddar", "oyster crackers", "gouda"]
-  find_the_cheese(soup)
+  while i < cheese_types.length
+    return cheese_types[i] if array.include?(cheese_types[i])
+    i += 1
+  end
 end
