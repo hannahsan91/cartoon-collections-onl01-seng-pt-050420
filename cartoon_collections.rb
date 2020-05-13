@@ -9,7 +9,7 @@ def summon_captain_planet(planeteer_calls)# code an argument here
 #=> ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"]
 end
 
-def long_planeteer_calls# code an argument here
+def long_planeteer_calls(assorted_words)# code an argument here
   short_words = ["puff", "go", "two"]
   long_planeteer_calls(short_words)
   assorted_words = ["two", "go", "industrious", "bop"]
